@@ -5,6 +5,7 @@ from django_summernote.admin import SummernoteModelAdmin
 # Register your models here.
 
 @admin.register(Recipe)
-class RecipeAdmin(SummernoteModelAdmin):
+class AdminRecipe(SummernoteModelAdmin):
 
+    prepopulated_fields = {'slug': ('author', 'title')}
     summernote_fields = ('ingredients', 'method')
