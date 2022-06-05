@@ -21,7 +21,7 @@ class Recipe(models.Model):
     ingredients = models.TextField()
     method = models.TextField()
     image = CloudinaryField('image', default='placeholder')
-    image_url = models.URLField()
+    image_url = models.URLField(blank=True)
     likes = models.ManyToManyField(User, related_name='post_likes', blank=True)
 
     class Meta:
