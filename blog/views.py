@@ -8,4 +8,8 @@ class HomeView(generic.ListView):
     model = Recipe
     queryset = Recipe.objects.order_by('-published_on')
     template_name = 'index.html'
-    paginate_by = 6
+
+class RecipeView(generic.ListView):
+    model = Recipe
+    template_name = "recipes.html"
+    paginate_by = 6 
