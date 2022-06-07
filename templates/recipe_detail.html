@@ -10,10 +10,10 @@
             <p class="recipe-subtitle">by {{ recipe.author }} | {{ recipe.published_on }}</p>
         </div>
         <div class="d-md-block col-md-6">
-            {% if "placeholder" in post.featured_image.url %}
+            {% if "placeholder" in recipe.image.url %}
                 <img src="https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" width="100%">
                 {% else %}
-                <img src=" {{ post.featured_image.url }}" width="100%">
+                <img src=" {{ recipe.image.url }}" width="100%">
                 {% endif %}
         </div>
     </div>
@@ -30,10 +30,14 @@
                 <p class="card-text ">{{ recipe.ingredients | safe }}</p>
                 <hr/>
                 <h3>Servings:</h3>
-                <p class="card-text ">{{ recipe.serves | safe }}</p>
+                {% if recipe.serves == 1 %}
+                <p class="card-text"><i class="fas fa-utensils"></i> {{ recipe.serves | safe }} <span>Serving</span></p>
+                {% else %}
+                <p class="card-text"><i class="fas fa-utensils"></i> {{ recipe.serves | safe }} <span>Servings</span></p>
+                {% endif %}
                 <hr/>
                 <h3>Time:</h3>
-                <p class="card-text ">{{ recipe.cook_time | safe }}</p>
+                <p class="card-text ">{{ recipe.cook_time | safe }} <span>Mins</span></p>
                 <hr/>
                 <h3>Method:</h3>
                 <p class="card-text ">{{ recipe.method | safe }}</p>
