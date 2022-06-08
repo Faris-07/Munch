@@ -27,3 +27,7 @@ body {
 footer {
     background-color: #84563C;
 }
+
+.btn-liked {
+    color: red;
+}
