@@ -14,11 +14,11 @@
                 {% if user.is_authenticated %}
                 <h3 class="jumbotron-header">Lets Start Munching {{ user }}</h3>
                 <br>
-                <button class="btn btn-lg btn-dark" href="#">Recipes</button>
+                <button type="submit" class="btn btn-lg btn-dark" href="/recipes">Recipes</button>
                 {% else %}
                 <h3 class="jumbotron-header">Sign up today to become a muncher and share your recipes with the world!</h3>
                 <br>
-                <button class="btn btn-lg btn-dark" href="#">Sign Up</button>
+                <button type="submit" class="btn btn-lg btn-dark" href="{% url 'account_signup' %}">Sign Up</button>
                 {% endif %}
             </section>
         </div>
