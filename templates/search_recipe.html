@@ -3,8 +3,8 @@
 {% block content %}
 
 <div class="row">
-    <div class="col-8 offset-2">
-        <h1 class="text-center">Results For:</h1>
+    <div class="col-8 offset-2 mt-4">
+        <h1 class="text-center">Results For: '{{ searched }}'</h1>
         <hr>
     </div>
 </div>
@@ -13,7 +13,7 @@
     <div class="row">
         <div class="col-12 mt-3 left">
             <div class="row">
-                {% for recipe in recipe_list %}
+                {% for recipe in recipes %}
                 <div class="col-md-4">
                     <div class="card mb-4">
                         <div class="card-body">
@@ -45,6 +45,25 @@
             </div>
             <div class="row">
                 {% endif %}
+
+                {% empty %}
+
+                <div class="container">
+                    <div class="row justify-content-md-center">
+                        <div class="col-md-8 text-center mt-4">
+                            <h2>Sorry, guess the munchers haven't got here yet...</h2>
+                            <h5 class="mt-4 lead">There are no recipes with '{{ searched }}' in the title. But maybe you can add one <span style='font-size:20px;'>&#128521;</span></p>
+                            <h5 class="lead"> Browse through all recipes <a href="{% url 'recipes' %}">here</a>. Or try searching again.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row justify-content-md-center">
+                        <div class="col-md-8 text-center mt-4">
+                            <iframe src="https://giphy.com/embed/N23cG6apipMmQ" class="giphy-embed"></iframe><p><a href="https://giphy.com/gifs/spongebob-spongebob-squarepants-nickelodeon-nye-N23cG6apipMmQ"></a></p>
+                        </div>
+                    </div>
+                </div>
                 {% endfor %}
             </div>
         </div>

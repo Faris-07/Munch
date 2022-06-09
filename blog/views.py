@@ -81,9 +81,10 @@ class RecipeLike(View):
 def SearchRecipe(request):
     if request.method == "POST":
         searched = request.POST.get("searched")
-        recipes = Recipe.objects.filter(title__contains=searched)
+        recipes = Recipe.objects.filter(title__icontains=searched)
         return render(
             request, "search_recipe.html", {"searched": searched, "recipes": recipes}
         )
     else:
         return render(request, "search_recipe.html")
+
