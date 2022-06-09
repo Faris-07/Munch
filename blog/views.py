@@ -76,3 +76,14 @@ class RecipeLike(View):
         else:
             recipe.likes.add(request.user)
         return HttpResponseRedirect(reverse('recipe_detail', args=[slug]))
+
+
+def SearchRecipe(request):
+    if request.method == "POST":
+        searched = request.POST.get("searched")
+        recipes = Recipe.objects.filter(title__contains=searched)
+        return render(
+            request, "search_recipe.html", {"searched": searched, "recipes": recipes}
+        )
+    else:
+        return render(request, "search_recipe.html")
