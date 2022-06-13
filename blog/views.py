@@ -1,7 +1,7 @@
 from django.shortcuts import render, get_object_or_404, reverse
 from django.http import HttpResponseRedirect
 from django.views import generic, View
-from django.views.generic import CreateView
+from django.views.generic import CreateView, UpdateView
 from .models import Recipe
 from .forms import CommentForm, RecipeForm
 
@@ -84,6 +84,10 @@ class AddRecipe(CreateView):
     form_class = RecipeForm
     template_name = 'add_recipe.html'
 
+class EditRecipe(UpdateView):
+    model = Recipe
+    form_class = RecipeForm 
+    template_name = 'edit_recipe.html'
 
 def SearchRecipe(request):
     if request.method == "POST":
