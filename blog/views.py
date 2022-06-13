@@ -1,7 +1,7 @@
 from django.shortcuts import render, get_object_or_404, reverse
 from django.http import HttpResponseRedirect
 from django.views import generic, View
-from django.views.generic import CreateView, UpdateView
+from django.views.generic import CreateView, UpdateView, DeleteView
 from .models import Recipe
 from .forms import CommentForm, RecipeForm
 
@@ -92,6 +92,10 @@ class EditRecipe(UpdateView):
     model = Recipe
     form_class = RecipeForm 
     template_name = 'edit_recipe.html'
+
+class DeleteRecipe(DeleteView):
+    model = Recipe
+    template_name = 'delete_recipe.html'
 
 def SearchRecipe(request):
     if request.method == "POST":
