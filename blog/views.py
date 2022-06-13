@@ -83,7 +83,7 @@ class AddRecipe(CreateView):
     model = Recipe
     form_class = RecipeForm
     template_name = 'add_recipe.html'
-    
+
     def form_valid(self, form):
         form.instance.author = self.request.user
         return super().form_valid(form)
