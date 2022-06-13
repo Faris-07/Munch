@@ -1,0 +1,27 @@
+{% extends 'base.html'%}
+
+{% block content %}
+
+<div class="container">
+    <div class="row">
+        <div class="col-12 mt-4">
+            <h1 class="text-center mt-2">Add Recipe</h1>
+            <hr>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 mt-3 mb-3 text-center">
+            <form class="signup" id="add_recipe_form" method="POST" enctype="multipart/form-data">
+                {% csrf_token %}
+                {{ form.media}}
+                {{ form.as_p }}
+                <button class="btn btn-success right mb-2" type="submit" value="Save">Add Recipe</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+{% endblock %} 
