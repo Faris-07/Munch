@@ -79,6 +79,11 @@ class RecipeLike(View):
         return HttpResponseRedirect(reverse('recipe_detail', args=[slug]))
 
 
+class AddRecipe(CreateView):
+    model = Recipe
+    template_name = 'add_recipe.html'
+
+
 def SearchRecipe(request):
     if request.method == "POST":
         searched = request.POST.get("searched")
@@ -88,7 +93,3 @@ def SearchRecipe(request):
         )
     else:
         return render(request, "search_recipe.html")
-
-class AddRecipe(CreateView):
-    model = Recipe
-    template_name = 'add_recipe.html'
