@@ -16,17 +16,14 @@ class RecipeForm(forms.ModelForm):
             "title",
             "description",
             "ingredients",
+            "method",
             "serves",
             "cook_time",
-            "method",
             "image",
             "image_url",
         )
         widgets = {
             "description": SummernoteWidget(),
             "ingredients": SummernoteWidget(),
-            "serves": SummernoteWidget(),
-            "cook_time": SummernoteWidget(),
             "method": SummernoteWidget(),
         }
-

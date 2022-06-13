@@ -36,7 +36,7 @@ class RecipeDetail(View):
                 "liked": liked,
                 "comment_form": CommentForm()
             }
-        ) 
+        )
 
     def post(self, request, slug, *args, **kwargs):
         queryset = Recipe.objects.all()
