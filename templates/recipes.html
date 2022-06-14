@@ -20,9 +20,9 @@
                         <div class="card-body">
                             <div class="image-container">
                                 {% if "placeholder" in recipe.image.url %}
-                                <img class="card-img-top" src="https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+                                <img class="card-img-top" src="https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" height="400">
                                 {% else %}
-                                <img class="card-img-top" src=" {{ recipe.image.url }}">
+                                <img class="card-img-top" src=" {{ recipe.image.url }}" height="400">
                                 {% endif %}
                             </div>
                             <a href="{% url 'recipe_detail' recipe.slug  %}" class="text-decoration-none">
