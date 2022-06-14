@@ -2,6 +2,7 @@ from django.shortcuts import render, get_object_or_404, reverse, redirect
 from django.http import HttpResponseRedirect
 from django.views import generic, View
 from django.views.generic import CreateView, UpdateView
+from django.core.paginator import Paginator
 from .models import Recipe
 from .forms import CommentForm, RecipeForm
 
