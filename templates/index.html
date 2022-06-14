@@ -14,11 +14,15 @@
                 {% if user.is_authenticated %}
                 <h3 class="jumbotron-header">Lets Start Munching {{ user }}</h3>
                 <br>
-                <button type="submit" class="btn btn-lg btn-dark" href="/recipes">Recipes</button>
+                <form action="{% url 'recipes' %}" method="get">
+                    <button class="btn btn-lg btn-dark">Recipes</button>
+                </form>
                 {% else %}
                 <h3 class="jumbotron-header">Sign up today to become a muncher and share your recipes with the world!</h3>
                 <br>
-                <button type="submit" class="btn btn-lg btn-dark" href="{% url 'account_signup' %}">Sign Up</button>
+                <form action="{% url 'account_signup' %}" method="get">
+                    <button class="btn btn-lg btn-dark">Sign Up</button>
+                </form>
                 {% endif %}
             </section>
         </div>
