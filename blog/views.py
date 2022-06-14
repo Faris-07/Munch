@@ -98,6 +98,19 @@ def delete_recipe(request, pk):
     recipe.delete()
     return redirect(reverse('recipes')) 
 
+class LikedRecipes(View):
+    def get(self, request):
+        if request.user.is_authenticated:
+            recipes = Recipe.objects.filter(likes=request.user.id)
+            paginator = Paginator(recipes, 6)
+            page_number = request.GET.get('page')
+            page_obj = paginator.get_page(page_number)
+            return render(request, 'liked_recipes.html', {
+                'page_obj': page_obj
+                })
+        else:
+            return render(request, 'liked_recipes.html')
+
 def SearchRecipe(request):
     if request.method == "POST":
         searched = request.POST.get("searched")
