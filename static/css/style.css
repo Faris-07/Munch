@@ -1,13 +1,15 @@
 body {
     min-height: 100vh;
     overflow-x: hidden;
+    background-color: #fff;
 }
 
 .callout-container {
-    height: 75vh;
+    height: 100vh;
 
-    background-color: #D9BE91;
-    /*background: url("") no-repeat bottom right fixed;*/
+    background-color: #918E85;
+    opacity: 0.95;
+    background: url("../images/mae-mu-1LPsUqjb_Jg-unsplash.jpg") no-repeat bottom right fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -21,13 +23,22 @@ body {
 } 
 
 .navbar {
-    background-color: #84563C;
+    background-color: #1d1f26;
 }
 
 footer {
-    background-color: #84563C;
+    background-color: #1d1f26;
 }
 
 .btn-liked {
     color: red;
+}
+
+.btn-red {
+    background-color: #782e27;
+    color: #fff;
+}
+
+.card-dark {
+    background-color: #32373c;
 }

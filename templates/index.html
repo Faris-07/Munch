@@ -7,21 +7,21 @@
     <div class="opaque-overlay">&nbsp;</div>
     <div class="row">
         <div class="col-12">
-            <section class="callout jumbotron text-center">
-                <h1 class="jumbotron-header">Munch</h1>
+            <section class="callout jumbotron text-center text-light">
+                <h1 class="jumbotron-header display-1">Munch</h1>
                 <h2 class="jumbotron-header">Delight in every bite</h2>
                 <hr class="block-divider">
                 {% if user.is_authenticated %}
                 <h3 class="jumbotron-header">Lets Start Munching {{ user }}</h3>
                 <br>
                 <form action="{% url 'recipes' %}" method="get">
-                    <button class="btn btn-lg btn-dark">Recipes</button>
+                    <button class="btn btn-lg btn-red">Recipes</button>
                 </form>
                 {% else %}
                 <h3 class="jumbotron-header">Sign up today to become a muncher and share your recipes with the world!</h3>
                 <br>
                 <form action="{% url 'account_signup' %}" method="get">
-                    <button class="btn btn-lg btn-dark">Sign Up</button>
+                    <button class="btn btn-lg btn-red">Sign Up</button>
                 </form>
                 {% endif %}
             </section>
@@ -30,13 +30,13 @@
 </div>
 
 
-<div class="container-wrapper mt-3">
+<div class="container-wrapper mt-3 about-us">
     <div class="container features-container content-container">
         <section class="features">
             <div class="row">
                 <div class="col-8 offset-2 page-header">
                     <h2 class="text-center">About Us</h2>
-                    <hr class="block-divider">
+                    <br>
                     <h4 class="text-center">What is Munch you ask?</h4>
                     <h5 class="text-center mt-3">Munch is a social recipe blog where people (Munchers) from all around the world can share recipes with each other all in one place.
                         A community of foodies uniting for one purpose... Food.
@@ -56,7 +56,20 @@
                 <div class="col-8 offset-2 page-header">
                     <h2 class="text-center">Features</h2>
                     <hr class="block-divider">
-                    <h4 class="text-center">What is Munch you ask?</h4>
+                    <h4 class="text-center"></h4>
+                    <div class="row">
+                        <div class="col-md-5">
+                            <img src="{{ member.image_source }}" alt="Profile image for {{ member.name }}">
+                            <h2 class="col-md-7">Share</h2>
+                        </div>
+                        <div class="col-md-7">
+                            <p>You can share your recipes with the world</p>
+                        </div>
+                    </div>
+                
+                    <div class="col-md-7">
+                        <p>You can share your recipes with the world</p>
+                    </div>
                 </div>
             </div>
         </section>  

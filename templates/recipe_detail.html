@@ -5,12 +5,12 @@
 {% load crispy_forms_tags %}
 
 <div class="container">
-    <div class="row g-0 recipe-card-head mt-4">
-        <div class="col-md-6 my-auto">
-            <h1 class="recipe-title text-dark"> {{ recipe.title }}</h1>
-            <p class="recipe-subtitle">by {{ recipe.author }} | {{ recipe.published_on }}</p>
+    <div class="row g-0 recipe-card-head mt-4 card-dark">
+        <div class="col-md-4 my-auto">
+            <h1 class="recipe-title text-center text-light"> {{ recipe.title }}</h1>
+            <p class="recipe-subtitle text-center text-light">by {{ recipe.author }} | {{ recipe.published_on }}</p>
         </div>
-        <div class="d-md-block col-md-6">
+        <div class="d-md-block col-md-8">
             {% if "placeholder" in recipe.image.url %}
                 <img src="https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" width="100%">
             {% else %}
