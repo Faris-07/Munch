@@ -9,7 +9,7 @@ body {
 
     background-color: #918E85;
     opacity: 0.99;
-    background: url("../images/mae-mu-1LPsUqjb_Jg-unsplash.jpg") no-repeat bottom right fixed;
+    background: url("../images/waffle.jpg") no-repeat bottom right fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -46,7 +46,7 @@ footer {
 .img-fit {
     object-fit: cover;
 }
-/**
+
 .card-animate:hover{
     transform: scale(1.01);
     background-color: #3f464d;
