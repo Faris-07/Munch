@@ -15,25 +15,25 @@
             <div class="row">
                 {% for recipe in recipes %}
                 <div class="col-md-4">
-                    <div class="card mb-4">
+                    <div class="card card-animate mb-4 card-dark">
                         <div class="card-body">
                             <div class="image-container">
                                 {% if "placeholder" in recipe.image.url %}
-                                <img class="card-img-top" src="https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+                                <img class="card-img-top img-fit" src="https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" width="600" height="400">
                                 {% else %}
-                                <img class="card-img-top" src=" {{ recipe.image.url }}">
+                                <img class="card-img-top img-fit" src=" {{ recipe.image.url }}" width="600" height="400">
                                 {% endif %}
                             </div>
                             <a href="{% url 'recipe_detail' recipe.slug  %}" class="text-decoration-none">
-                                <h2 class="card-title">{{ recipe.title }}</h2>
+                                <h2 class="card-title text-light">{{ recipe.title }}</h2>
                                 <p class="text-muted">by {{ recipe.author }}</p>
                                 {% if recipe.serves == 1 %}
-                                <p class="card-text"><i class="fas fa-utensils"></i> {{ recipe.serves }} <span>Serving</span></p>
+                                <p class="card-text text-light"><i class="fas fa-utensils"></i> {{ recipe.serves }} <span>Serving</span></p>
                                 {% else %}
-                                <p class="card-text"><i class="fas fa-utensils"></i> {{ recipe.serves }} <span>Servings</span></p>
+                                <p class="card-text text-light"><i class="fas fa-utensils"></i> {{ recipe.serves }} <span>Servings</span></p>
                                 {% endif %}
-                                <p class="card-text"><i class="fas fa-clock"></i> {{ recipe.cook_time }} <span>Mins</span></p>
-                                <p class="card-text">{{ recipe.description }}</p>
+                                <p class="card-text text-light"><i class="fas fa-clock"></i> {{ recipe.cook_time }} <span>Mins</span></p>
+                                <p class="card-text text-light">{{ recipe.description|striptags }}</p>
                             </a>
                             <hr />
                             <p class="card-text text-muted h6">{{ recipe.published_on}} <i class="far fa-heart"></i>

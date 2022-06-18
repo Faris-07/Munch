@@ -9,7 +9,6 @@
         <div class="col-md-4 my-auto pb-5 p-5 text-center">
             <h1 class="recipe-title text-center text-light"> {{ recipe.title }}</h1>
             <p class="recipe-subtitle text-center text-light">by {{ recipe.author }} | {{ recipe.published_on }}</p>
-            <hr>
             {% if user.is_authenticated and user.id == recipe.author.id %}
             <a href="{% url 'edit_recipe' recipe.id %}"><button class="btn btn-success">Edit</button></a>
             <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Delete</button>
@@ -43,7 +42,7 @@
             {% if "placeholder" in recipe.image.url %}
                 <img class="img-fit" src="https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" width="100%">
             {% else %}
-                <img class="img-fit" src=" {{ recipe.image.url }}" width="100%">
+                <img class="img-fit" src=" {{ recipe.image.url }}"  width="100%" height="100%">
             {% endif %}
         </div>
     </div>
