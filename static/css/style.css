@@ -46,7 +46,7 @@ footer {
 .img-fit {
     object-fit: cover;
 }
-
+/**
 .card-animate:hover{
     transform: scale(1.01);
     background-color: #3f464d;

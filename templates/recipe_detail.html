@@ -6,15 +6,44 @@
 
 <div class="container">
     <div class="row g-0 recipe-card-head mt-4 card-dark">
-        <div class="col-md-4 my-auto pb-5 p-5">
+        <div class="col-md-4 my-auto pb-5 p-5 text-center">
             <h1 class="recipe-title text-center text-light"> {{ recipe.title }}</h1>
             <p class="recipe-subtitle text-center text-light">by {{ recipe.author }} | {{ recipe.published_on }}</p>
+            <hr>
+            {% if user.is_authenticated and user.id == recipe.author.id %}
+            <a href="{% url 'edit_recipe' recipe.id %}"><button class="btn btn-success">Edit</button></a>
+            <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Delete</button>
+
+            <!-- Modal -->
+            <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static"
+                data-bs-keyboard="false" tabindex="-2" aria-labelledby="staticBackdropLabel"
+                aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="staticBackdropLabel">Delete Recipe</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <p>Are you sure you want to delete the recipe {{ recipe.title }}?</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary"
+                                data-bs-dismiss="modal">Close</button>
+                                <a href="{% url 'delete_recipe' recipe.id %}"><button type="submit" class="btn btn-danger">Delete</button></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endif %}
         </div>
+
         <div class="d-md-block col-md-8">
             {% if "placeholder" in recipe.image.url %}
-                <img src="https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" width="100%">
+                <img class="img-fit" src="https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" width="100%">
             {% else %}
-                <img src=" {{ recipe.image.url }}" width="100%">
+                <img class="img-fit" src=" {{ recipe.image.url }}" width="100%">
             {% endif %}
         </div>
     </div>

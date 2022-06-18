@@ -94,10 +94,10 @@ class EditRecipe(UpdateView):
     form_class = RecipeForm 
     template_name = 'edit_recipe.html'
 
-def delete_recipe(request, pk):
-    recipe = get_object_or_404(Recipe, id=pk)
+def delete_recipe(request, recipe_id):
+    recipe = get_object_or_404(Recipe, id=recipe_id)
     recipe.delete()
-    return redirect(reverse('recipes')) 
+    return redirect(reverse('recipes'))
 
 class LikedRecipes(View):
     def get(self, request):
