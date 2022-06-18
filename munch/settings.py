@@ -80,7 +80,7 @@ SUMMERNOTE_CONFIG = {
             ['fontname', ['fontname']],
             ['color', ['color']],
         ],
-    'height': 300,
+    'height': 400
 }
 
 MIDDLEWARE = [
