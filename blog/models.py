@@ -4,7 +4,6 @@ from cloudinary.models import CloudinaryField
 from django.urls import reverse
 from django.utils.text import slugify
 
-# Create your models here.
 
 
 class Recipe(models.Model):

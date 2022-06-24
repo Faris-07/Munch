@@ -1,15 +1,17 @@
-from .models import Comment, Recipe
-from django import forms
 from django_summernote.widgets import SummernoteWidget
+from django import forms
+from .models import Comment, Recipe
 
 
 class CommentForm(forms.ModelForm):
+    """Comments form"""
     class Meta:
         model = Comment
         fields = ('body',)
 
 
 class RecipeForm(forms.ModelForm):
+    """Recipe Form"""
     class Meta:
         model = Recipe
         fields = (
