@@ -8,6 +8,7 @@ from django.utils.text import slugify
 
 
 class Recipe(models.Model):
+    """Model for Recipe"""
     title = models.CharField(max_length=200, unique=True)
     slug = models.SlugField(max_length=200, unique=True)
     author = models.ForeignKey(
@@ -33,6 +34,7 @@ class Recipe(models.Model):
         return self.title
 
     def number_of_likes(self):
+        """Returns number of likes"""
         return self.likes.count()
 
     def save(self, *args, **kwargs):
@@ -44,6 +46,7 @@ class Recipe(models.Model):
 
 
 class Comment(models.Model):
+    """Model for comments"""
     recipe = models.ForeignKey(
         Recipe, on_delete=models.CASCADE, related_name='comments'
         )
