@@ -9,17 +9,19 @@ from .forms import CommentForm, RecipeForm
 # Create your views here.
 
 class HomeView(generic.ListView):
+    """ Renders the home page"""
     model = Recipe
     queryset = Recipe.objects.order_by('-published_on')
     template_name = 'index.html'
 
 class RecipeView(generic.ListView):
+    """Renders all the recipes"""
     model = Recipe
     template_name = "recipes.html"
     paginate_by = 6 
 
 class RecipeDetail(View):
-
+    """Renders recipe details"""
     def get(self, request, slug, *args, **kwargs):
         queryset = Recipe.objects.all()
         recipe = get_object_or_404(queryset, slug=slug)
@@ -40,6 +42,7 @@ class RecipeDetail(View):
         )
 
     def post(self, request, slug, *args, **kwargs):
+        """POST request"""
         queryset = Recipe.objects.all()
         recipe = get_object_or_404(queryset, slug=slug)
         comments = recipe.comments.order_by('created_on')
@@ -70,6 +73,7 @@ class RecipeDetail(View):
         )
 
 class RecipeLike(View):
+    """Likes and unlikes recipes"""
     def post(self, request, slug):
         recipe = get_object_or_404(Recipe, slug=slug)
 
@@ -81,6 +85,7 @@ class RecipeLike(View):
 
 
 class AddRecipe(CreateView):
+    """Add a Recipe"""
     model = Recipe
     form_class = RecipeForm
     template_name = 'add_recipe.html'
@@ -90,16 +95,19 @@ class AddRecipe(CreateView):
         return super().form_valid(form)
 
 class EditRecipe(UpdateView):
+    """Edit a recipe"""
     model = Recipe
     form_class = RecipeForm 
     template_name = 'edit_recipe.html'
 
 def delete_recipe(request, recipe_id):
+    """Deletes recipe"""
     recipe = get_object_or_404(Recipe, id=recipe_id)
     recipe.delete()
     return redirect(reverse('recipes'))
 
 class LikedRecipes(View):
+    """Renders users liked recipes"""
     def get(self, request):
         if request.user.is_authenticated:
             recipes = Recipe.objects.filter(likes=request.user.id)
@@ -113,6 +121,7 @@ class LikedRecipes(View):
             return render(request, 'liked_recipes.html')
 
 def SearchRecipe(request):
+    """Renders users search results"""
     if request.method == "POST":
         searched = request.POST.get("searched")
         recipes = Recipe.objects.filter(title__icontains=searched)
