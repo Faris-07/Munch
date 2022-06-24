@@ -76,6 +76,9 @@
                     </li>
                     {% endif %}
                 </ul>
+
+                <!-- Search Bar -->
+
                 <form class="d-flex" method="POST" action="{% url 'search_recipe' %}" role="search">
                     {% csrf_token %}
                     <input class="form-control me-2" type="search" placeholder="Get Munching..." aria-label="Search" name="searched">
@@ -84,6 +87,8 @@
             </div>
         </div>
     </nav>
+
+    <!-- Alert Message -->
 
     <div class="container">
         <div class="row">
@@ -113,6 +118,8 @@
             <i class="fab fa-instagram-square ms-3"></i>
             <i class="fab fa-youtube-square ms-3"></i></p>
     </footer>
+
+    <!-- Alert Message Timer -->
     <script>
         setTimeout(function () {
             let messages = document.getElementById('msg');
