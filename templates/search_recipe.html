@@ -2,6 +2,7 @@
 
 {% block content %}
 
+<!-- Page Heading -->
 <div class="row">
     <div class="col-8 offset-2 mt-4">
         <h1 class="text-center">Results For: '{{ searched }}'</h1>
@@ -9,6 +10,7 @@
     </div>
 </div>
 
+<!-- Recipe card -->
 <div class="container-fluid">
     <div class="row">
         <div class="col-12 mt-3 left">
@@ -48,6 +50,7 @@
 
                 {% empty %}
 
+                <!-- Empty Search Results Dialogue -->
                 <div class="container">
                     <div class="row justify-content-md-center">
                         <div class="col-md-8 text-center mt-4">
@@ -68,6 +71,8 @@
             </div>
         </div>
     </div>
+
+    <!-- Pagination -->
     {% if is_paginated %}
     <nav aria-label="Page navigation">
         <ul class="pagination justify-content-center">
