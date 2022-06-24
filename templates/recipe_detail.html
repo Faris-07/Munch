@@ -4,6 +4,7 @@
 
 {% load crispy_forms_tags %}
 
+<!-- Recipe Card Header -->
 <div class="container">
     <div class="row g-0 recipe-card-head mt-4 card-dark">
         <div class="col-md-4 my-auto pb-5 p-5 text-center">
@@ -13,7 +14,7 @@
             <a href="{% url 'edit_recipe' recipe.id %}"><button class="btn btn-success">Edit</button></a>
             <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Delete</button>
 
-            <!-- Modal -->
+            <!-- Delete Recipe Modal -->
             <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static"
                 data-bs-keyboard="false" tabindex="-2" aria-labelledby="staticBackdropLabel"
                 aria-hidden="true">
@@ -38,6 +39,7 @@
             {% endif %}
         </div>
 
+        <!-- Recipe Image-->
         <div class="d-md-block col-md-8">
             {% if "placeholder" in recipe.image.url %}
                 <img class="img-fluid img-fit" src="https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" width="100%">
@@ -49,6 +51,7 @@
 </div>
 
 
+<!-- Recipe Content -->
 <div class="container">
     <div class="row">
         <div class="col card mb-4  mt-3 left top">
@@ -81,6 +84,7 @@
         </div>
     </div>
 
+    <!-- Recipe Likes Counter -->
     <div class="container">
         <div class="row">
             <div class="col-4 col-sm-2">
@@ -104,6 +108,8 @@
                     {{ recipe.number_of_likes }}
                 </strong>
             </div>
+
+            <!-- Comment Counter -->
             <div class="col-4">
                 {% with comments.count as total_comments %}
                 <strong class="text-secondary"><i class="far fa-comments"></i>
@@ -113,7 +119,7 @@
             </div>
         </div>
     
-    
+    <!-- Comments Section -->
     <div class="container">
         <div class="row">
             <div class="col card mb-4  mt-3 ">
