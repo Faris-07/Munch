@@ -53,5 +53,19 @@ The design of the app is based on the wireframes with a mix of another food blog
 
 The design of the database can be seen below.
 
-![Database Schema](../Munch/static/images/Munch-ERD.png)
+![Database Schema](/static/images/Munch-ERD.png)
 
+## Features
+
+### Home Page
+
+#### Navigation bar
+- The navigation bar is at the top of every page and contains the links to all the other pages.
+- The current page is highlighted active to the user by bolder font. 
+- Hovering over the nav links will brighten the font.
+- The links to "Register" and "Log in" will change to "Log Out" once the user has logged in to their account.
+- Once a user has logged in, more links will be displayed. The links that will be displayed are "Profile" which is a dropdown box which contains two options which are "Add Recipe" and "Liked Recipes".
+- There is a search bar on the right side of the navbar so users can easily and quickly search for recipes.
+- The navbar is fully responsive, collapsing into a hamburger menu when the screen size is small e.g. mobile. 
+
+![Navbar](/static/images/Munch-navbar.png)
