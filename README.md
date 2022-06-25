@@ -49,3 +49,9 @@ The design of the app is based on the wireframes with a mix of another food blog
 ### Imagery
 - All the images are based on food and where taken from this [site.](https://iamafoodblog.com/)
 
+## Database Schema 
+
+The design of the database can be seen below.
+
+![Database Schema](../Munch/static/images/Munch-ERD.png)
+
