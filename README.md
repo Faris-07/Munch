@@ -36,3 +36,16 @@ Munch is a website for all ages but specifically tailored to adults where they c
 ### EPIC | Admin
 - As an Admin I can view, create, edit and delete all recipes and comments so that I can control the website's content.
 
+## Design
+
+The design of the app is based on the wireframes with a mix of another food blog called [iamafoodblog](https://iamafoodblog.com/) and Code Institutes 'I think therefore I Blog' project.   
+
+### Colour Scheme
+- The colour scheme for Munch is fairly simple, minimal and aesthetically pleasing. I used a very dark grey, white and some subtle hints of colour such as the red/maroon buttons to contrast the hero image on the home page. I went for this style as it is clean but also because it is versatile as it matches with most colours which is important as the site would complement the colours of the images uploaded by users, and keep the recipes the center of attention.
+
+### Typography
+- The font used on Munch is Dosis as it is a clear and easily readable font. It is also a unique and fun font which goes with the blog theme of the site.  
+
+### Imagery
+- All the images are based on food and where taken from this [site.](https://iamafoodblog.com/)
+
