@@ -167,3 +167,11 @@ The design of the database can be seen below.
 ### If recipe is not found
 
 ![search page not found](static/images/searched-page-nf.png)
+
+### Profile 
+- When a user is logged in the profile dropdown menu will appear on the navbar.
+- Within the profile dropdown menu their are two options which are "Add recipe" and "Liked recipes".
+- The "Add recipe" will take the user to the add recipe page, where they can add a new recipe.
+- The "Liked recipes" page takes the user to the liked recipes page, where they can view all the recipes they have liked.
+
+![Profile](static/images/profile.png)
