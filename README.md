@@ -256,3 +256,5 @@ The design of the database can be seen below.
     - Used to add a WYSIWYG text box to the add recipe page.
 - [Heroku](https://www.heroku.com/)
     - To deploy the project.
+
+# Testing
