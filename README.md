@@ -269,7 +269,7 @@ The design of the database can be seen below.
     - No errors were found when passing through the [W3C Markup Validation Service](https://validator.w3.org/). 
 
 - CSS
-    - No errors were found when passing through the [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/validator).
+    - No errors were found when passing through the [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/).
 
 - JS
     - No errors were found when passing through the [JSHint](https://jshint.com/).
