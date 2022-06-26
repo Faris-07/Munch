@@ -6,58 +6,58 @@ The live link can be found here - [Munch]()
 
 ![responsive]()
 
-## User Experience (UX)
+# User Experience (UX)
 
 Munch is a website for all ages but specifically tailored to adults where they can explore different recipes and cuisines or share their own in a community of foodies also known as Munchers!
 
-## User Stories 
+# User Stories 
 
-### EPIC | Navigation
+## EPIC | Navigation
 - As a User I can navigate around the site so that I can easily view desired content.
 - As a User I can view a list of recipes so that I can select one to read.
 - As a User I can select a recipe so that I can read the recipe details
 - As a User I can search for recipes so that I can find specific recipes.
 
-### EPIC | User's Recipes
+## EPIC | User's Recipes
 - As a User I can create a recipe so that other Munch users can view them.
 - As a User I can edit recipes so that I can update any changes or mistakes to my recipes.
 - As a User I can delete recipes so that I can remove any submitted recipes.
 
-### EPIC | User Interaction
+## EPIC | User Interaction
 - As a User I can like/unlike recipes so that I can mark my favourite recipes
 - As a User I can view the number of likes on a recipe so that I can see which is most popular.
 - As a User I can leave comments on a recipe so that I give feedback and opinions and feel involved in the conversation
 - As a User I can view comments on recipes so that I can read other user's comments and be part of the conversation.
 
-### EPIC | Sign in
+## EPIC | Sign in
 - As a User I can register an account so that I can like/dislike, comment and upload recipes.
 - As a User I can log in and out of my account so that I can control and manage my account
 
-### EPIC | Admin
+## EPIC | Admin
 - As an Admin I can view, create, edit and delete all recipes and comments so that I can control the website's content.
 
-## Design
+# Design
 
 The design of the app is based on the wireframes with a mix of another food blog called [iamafoodblog](https://iamafoodblog.com/) and Code Institutes 'I think therefore I Blog' project.   
 
-### Colour Scheme
+## Colour Scheme
 - The colour scheme for Munch is fairly simple, minimal and aesthetically pleasing. I used a very dark grey, white and some subtle hints of colour such as the red/maroon buttons to contrast the hero image on the home page. I went for this style as it is clean but also because it is versatile as it matches with most colours which is important as the site would complement the colours of the images uploaded by users, and keep the recipes the center of attention.
 
-### Typography
+## Typography
 - The font used on Munch is Dosis as it is a clear and easily readable font. It is also a unique and fun font which goes with the blog theme of the site.  
 
-### Imagery
+## Imagery
 - All the images are based on food and where taken from this [site.](https://iamafoodblog.com/)
 
-## Database Schema 
+# Database Schema 
 
 The design of the database can be seen below.
 
 ![Database Schema](/static/images/Munch-ERD.png)
 
-## Features
+# Features
 
-### Home Page
+## Home Page
 
 ### Navigation bar
 - The navigation bar is at the top of every page and contains the links to all the other pages.
@@ -210,7 +210,49 @@ The design of the database can be seen below.
 
 ![edit recipe page](static/images/edit-recipe-page-2.png)
 
-### Features to add
+## Features left to implement
+*There are no features left to implement from the initial scope of my project, however I have some features that I would like to add in the future.*
+
 - A search filter to filter through different categories such as food type (Breakfast, Dessert etc), popularity etc. 
 - A top recipes feature to dynamically show the top recipes.
 - Option to share recipes on social media.
+
+# Technologies
+
+## Languages used
+
+- [HTML5](https://en.wikipedia.org/wiki/HTML5)
+- [CSS3](https://en.wikipedia.org/wiki/Cascading_Style_Sheets)
+- [Javascript](https://en.wikipedia.org/wiki/JavaScript)
+- [Python](https://www.python.org/)
+
+## Libraries and Programs Used
+
+- [Git](https://git-scm.com/)
+    - Version control.
+- [GitHub](https://github.com/)
+    - For storing code and deploying the site.
+- [Gitpod](https://www.gitpod.io/)
+    - Used for building and editing my code.
+- [Django](https://www.djangoproject.com/)
+    - A python based framework that was used to develop the site.
+- [Bootstrap](https://getbootstrap.com/)
+    - For help designing the html templates.
+- [Google Fonts](https://fonts.google.com/)
+    - Used to style the website's text.
+- [Font Awesome](https://fontawesome.com/)
+    - Used to obtain the icons used.
+- [Google Developer Tools](https://developers.google.com/web/tools/chrome-devtools)
+    - Used to help fix problem areas and identify bugs.
+- [Cloudinary](https://cloudinary.com/)
+    - Used to store static files and images.
+- [Favicon.io](https://favicon.io/)
+    - Used to generate the site's favicon.
+- [PostgreSQL](https://www.postgresql.org/)
+    - Database used through heroku.
+- [LucidChart](https://www.lucidchart.com/pages/)
+    - To draw the database schema.
+- [Summernote](https://summernote.org/)
+    - Used to add a WYSIWYG text box to the add recipe page.
+- [Heroku](https://www.heroku.com/)
+    - To deploy the project.
