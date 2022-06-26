@@ -155,3 +155,15 @@ The design of the database can be seen below.
 - When a user posts a comment the comment counter increments by 1.
 
 ![comment section](static/images/comment.png)
+
+### Search Recipes Page
+
+### Search Recipes
+- Users can search for specific foods and recipes and all related recipes will be shown to the user.
+- If a recipe or food is not found the user is presented with a message telling them to search again and/or view all the recipes (recipe page).
+
+![search page](static/images/searched-page.png)
+
+### If recipe is not found
+
+![search page not found](static/images/searched-page-nf.png)
