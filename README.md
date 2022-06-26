@@ -59,7 +59,7 @@ The design of the database can be seen below.
 
 ### Home Page
 
-#### Navigation bar
+### Navigation bar
 - The navigation bar is at the top of every page and contains the links to all the other pages.
 - The current page is highlighted active to the user by bolder font. 
 - Hovering over the nav links will brighten the font.
@@ -70,7 +70,7 @@ The design of the database can be seen below.
 
 ![Navbar](/static/images/Munch-navbar.png)
 
-#### Hero Image
+### Hero Image
 - The hero image welcomes the user with the Munch catch line and tells the user to sign up to start Munching.
 - There is a sign up button just below the message. Clicking the button will take the user to the register page.
 - When a user is signed in the message changes to "Lets start Munching {Username}" and the sign up button changes to the recipes button which once clicked on takes the user to the recipes page. 
@@ -79,8 +79,15 @@ The design of the database can be seen below.
 
 ![Hero Image Logged In](/static/images/Hero-2.png)
 
-#### About Us
+### About Us
 - The about us section explains to the user a bit about the Munch website.
 - It also shows the user that we cultivate an inclusive community.
 
 ![About Us](/static/images/about-us.png)
+
+### Features
+- The features section displays three short messages stating some functionality of the Munch website next to images of food.
+
+![features](static/images/features.png)
+
+
