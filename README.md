@@ -129,4 +129,29 @@ The design of the database can be seen below.
 
 ![recipe card](static/images/recipe-card.png)
 
+### Recipe Detail Page
 
+### Recipe Feature
+- At the top of the page the recipe feature shows the image, title, author and published date.
+- If the user created that certain recipe they will see two additional buttons "edit" and "delete" which will take them to the edit recipe page and delete confirmation modal. 
+
+![recipe feature](static/images/recipe-feature.png)
+
+### If the recipe belongs to the user
+
+![users recipe feature](static/images/users-recipe-feature.png)
+
+### Main Section
+- The main body of the page consists of the description, ingredients, servings, cook time and method. These combined is what creates the whole recipe.
+- At the bottom of the section is an icon and counter for both likes and comments.
+- Clicking the outlined heart renders the recipe 'liked' by the user which will then fill in the heart, add 1 to the counter, and add the recipe to the users liked recipes page.
+- Alternatively, clicking a filled in heart renders the recipe 'unliked' which will then change the heart back to an outline, reduce the counter by 1 and remove the recipe from the user's liked recipe page.
+
+![recipe main section](static/images/recipe-main-section.png)
+
+### Comments
+- At the bottom of the page is the comment section. This is where users can view all comments left by themselves and other users.
+- Only signed in users can leave a comment. 
+- When a user posts a comment the comment counter increments by 1.
+
+![comment section](static/images/comment.png)
