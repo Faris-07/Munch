@@ -90,4 +90,9 @@ The design of the database can be seen below.
 
 ![features](static/images/features.png)
 
+### Footer
+- The footer rests at the bottom of each page and has links to all social media accounts.
+- The footer also includes social media links so the user can see and connect with Munch and other Munchers. The links will open to a new tab to allow easy navigation for the user.
+
+![footer](static/images/Munch-footer.png)
 
