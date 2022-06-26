@@ -69,3 +69,13 @@ The design of the database can be seen below.
 - The navbar is fully responsive, collapsing into a hamburger menu when the screen size is small e.g. mobile. 
 
 ![Navbar](/static/images/Munch-navbar.png)
+
+#### Hero Image
+- The hero image welcomes the user with the Munch catch line and tells the user to sign up to start Munching.
+- There is a sign up button just below the message. Clicking the button will take the user to the register page.
+- When a user is signed in the message changes to "Lets start Munching {Username}" and the sign up button changes to the recipes button which once clicked on takes the user to the recipes page. 
+
+![Hero Image](/static/images/Hero-1.png)
+
+![Hero Image Logged In](/static/images/Hero-2.png)
+
