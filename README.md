@@ -258,3 +258,21 @@ The design of the database can be seen below.
     - To deploy the project.
 
 # Testing
+
+## Validator Testing
+
+- HTML
+    - No errors were found when passing through the [W3C Markup Validation Service](https://validator.w3.org/). 
+
+- CSS
+    - No errors were found when passing through the [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/validator).
+
+- JS
+    - No errors were found when passing through the [JSHint](https://jshint.com/).
+
+- Python
+    - No errors were found when passing through the [PEP8 Validator tool](http://pep8online.com/).
+
+- **Lighthouse**
+
+    - 
