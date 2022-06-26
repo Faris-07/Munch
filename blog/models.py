@@ -5,7 +5,6 @@ from django.urls import reverse
 from django.utils.text import slugify
 
 
-
 class Recipe(models.Model):
     """Model for Recipe"""
     title = models.CharField(max_length=200, unique=True)
