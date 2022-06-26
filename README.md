@@ -200,4 +200,14 @@ The design of the database can be seen below.
 
 ![liked recipes](static/images/liked-recipes.png)
 
+### Edit Recipe Page
+
+### Editing Recipes
+- Editing a recipe brings up the form that was filled in when the user created the recipe and contains all the fields filled in with the original content.
+- Changing the content and clicking the "edit recipe" button at the bottom of the page saves the recipe.
+
+![edit recipe page](static/images/edit-recipe-page-1.png)
+
+![edit recipe page](static/images/edit-recipe-page-2.png)
+
 
