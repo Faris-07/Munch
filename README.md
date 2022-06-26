@@ -97,6 +97,7 @@ The design of the database can be seen below.
 ![footer](static/images/Munch-footer.png)
 
 ### Accounts
+
 ### Register Page
 - The register page is used to create an account.
 - The user enters a username, email(optional), password and a confirmation of the password.
@@ -115,3 +116,17 @@ The design of the database can be seen below.
 - A success message will appear once a user successfully logs out.
 
 ![log out page](static/images/signout-page.png)
+
+### Recipe Page
+
+### Recipe Cards
+- The site will paginate all recipe cards to display 6 for a page.
+- Each card will display the recipe's image, Title, Author, Servings, Cook time, Description, Published date and how many likes it has received.
+- Clicking anywhere inside the recipes card will take the user directly to that recipes detail page.
+- The recipe cards are in a dark grey to match the websites theme as well as contrast the white background.
+
+![recipe page](static/images/recipe-page.png)
+
+![recipe card](static/images/recipe-card.png)
+
+
