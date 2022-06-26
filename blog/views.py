@@ -8,17 +8,20 @@ from .forms import CommentForm, RecipeForm
 
 # Create your views here.
 
+
 class HomeView(generic.ListView):
     """ Renders the home page"""
     model = Recipe
     queryset = Recipe.objects.order_by('-published_on')
     template_name = 'index.html'
 
+
 class RecipeView(generic.ListView):
     """Renders all the recipes"""
     model = Recipe
     template_name = "recipes.html"
-    paginate_by = 6 
+    paginate_by = 6
+
 
 class RecipeDetail(View):
     """Renders recipe details"""
@@ -72,6 +75,7 @@ class RecipeDetail(View):
             },
         )
 
+
 class RecipeLike(View):
     """Likes and unlikes recipes"""
     def post(self, request, slug):
@@ -94,17 +98,20 @@ class AddRecipe(CreateView):
         form.instance.author = self.request.user
         return super().form_valid(form)
 
+
 class EditRecipe(UpdateView):
     """Edit a recipe"""
     model = Recipe
-    form_class = RecipeForm 
+    form_class = RecipeForm
     template_name = 'edit_recipe.html'
+
 
 def delete_recipe(request, recipe_id):
     """Deletes recipe"""
     recipe = get_object_or_404(Recipe, id=recipe_id)
     recipe.delete()
     return redirect(reverse('recipes'))
+
 
 class LikedRecipes(View):
     """Renders users liked recipes"""
@@ -120,13 +127,15 @@ class LikedRecipes(View):
         else:
             return render(request, 'liked_recipes.html')
 
+
 def SearchRecipe(request):
     """Renders users search results"""
     if request.method == "POST":
         searched = request.POST.get("searched")
         recipes = Recipe.objects.filter(title__icontains=searched)
         return render(
-            request, "search_recipe.html", {"searched": searched, "recipes": recipes}
+            request, "search_recipe.html", {"searched": searched,
+            "recipes": recipes}
         )
     else:
         return render(request, "search_recipe.html")
