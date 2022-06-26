@@ -124,6 +124,7 @@ The design of the database can be seen below.
 - Each card will display the recipe's image, Title, Author, Servings, Cook time, Description, Published date and how many likes it has received.
 - Clicking anywhere inside the recipes card will take the user directly to that recipes detail page.
 - The recipe cards are in a dark grey to match the websites theme as well as contrast the white background.
+- The recipe cards also have a hover effect so the user can easily navigate through the recipes and see what recipe their cursor is currently on.
 
 ![recipe page](static/images/recipe-page.png)
 
@@ -191,4 +192,12 @@ The design of the database can be seen below.
 ![add recipe page](static/images/add-recipe-page-1.png)
 
 ![add recipe page](static/images/add-recipe-page-2.png)
+
+### Liked Recipes Page
+
+### Liked Recipes
+- This page shows recipes that the user has liked.
+
+![liked recipes](static/images/liked-recipes.png)
+
 
