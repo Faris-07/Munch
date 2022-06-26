@@ -96,3 +96,22 @@ The design of the database can be seen below.
 
 ![footer](static/images/Munch-footer.png)
 
+### Accounts
+### Register Page
+- The register page is used to create an account.
+- The user enters a username, email(optional), password and a confirmation of the password.
+
+![sign up page](static/images/signup-page.png)
+
+### Login Page
+- The login page is used to log in users with an existing account.
+- The user enters their username and password.
+- A success message will appear once a user successfully logs in.
+
+![sign in page](static/images/signin-page.png)
+
+### Log out Page
+- The log out page is used to log out users who are signed in.
+- A success message will appear once a user successfully logs out.
+
+![log out page](static/images/signout-page.png)
