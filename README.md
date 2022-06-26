@@ -79,3 +79,8 @@ The design of the database can be seen below.
 
 ![Hero Image Logged In](/static/images/Hero-2.png)
 
+#### About Us
+- The about us section explains to the user a bit about the Munch website.
+- It also shows the user that we cultivate an inclusive community.
+
+![About Us](/static/images/about-us.png)
