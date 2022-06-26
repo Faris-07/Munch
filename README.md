@@ -175,3 +175,20 @@ The design of the database can be seen below.
 - The "Liked recipes" page takes the user to the liked recipes page, where they can view all the recipes they have liked.
 
 ![Profile](static/images/profile.png)
+
+### Add Recipe Page
+
+### Adding Recipes
+- The add recipe page is where users upload their recipes.
+- Each recipe is uploaded by filling out a form.
+- The form uses summernote widgets.
+- If the user fails to fill out either the recipes Title, Description, Ingredients, Servings, Cook time or Method, results in the form failing and rendering a message stating which fields the user has missed. 
+- The user has two options to upload an image of their recipe. They can either choose a file to upload or insert the URL address of the image. 
+- If neither of the image options are used a default image will be generated.
+- An add Recipe button is present at the bottom of the page once the form is ready to send.
+- A success message appears once a recipe is added successfully.  
+
+![add recipe page](static/images/add-recipe-page-1.png)
+
+![add recipe page](static/images/add-recipe-page-2.png)
+
