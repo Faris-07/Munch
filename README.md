@@ -210,4 +210,7 @@ The design of the database can be seen below.
 
 ![edit recipe page](static/images/edit-recipe-page-2.png)
 
-
+### Features to add
+- A search filter to filter through different categories such as food type (Breakfast, Dessert etc), popularity etc. 
+- A top recipes feature to dynamically show the top recipes.
+- Option to share recipes on social media.
