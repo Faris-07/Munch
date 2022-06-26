@@ -248,8 +248,12 @@ The design of the database can be seen below.
     - Used to store static files and images.
 - [Favicon.io](https://favicon.io/)
     - Used to generate the site's favicon.
+- [SQlite](https://www.sqlite.org/index.html)
+    - Used when performing unit tests.
 - [PostgreSQL](https://www.postgresql.org/)
     - Database used through heroku.
+- [Tinyjpg](https://tinyjpg.com/)
+    - Used to compress images.
 - [LucidChart](https://www.lucidchart.com/pages/)
     - To draw the database schema.
 - [Summernote](https://summernote.org/)
@@ -276,3 +280,27 @@ The design of the database can be seen below.
 - **Lighthouse**
 
     - 
+
+## Deployment
+
+The site was deployed via Heroku, and the live link can be found here - [Munch]()
+
+### Project Deployment
+
+To deploy the project through Heroku I followed these steps:
+- Sign up / Log in to [Heroku](https://www.heroku.com/)
+- From the main Heroku Dashboard page select 'New' and then 'Create New App'
+
+## Bugs
+- Solved Bugs
+    -  
+
+- Remaining Bugs
+    - No bugs remaining.
+
+## Credits
+- 
+
+### Media
+- 
+ 
