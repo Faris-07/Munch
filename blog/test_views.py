@@ -77,7 +77,7 @@ class TestViews(TestCase):
 
     # Tests for page functionality
 
-    def test_can_add_recipe(self):
+    def test_add_recipe(self):
         """
         Testing recipes can be added to database
         """
@@ -90,9 +90,9 @@ class TestViews(TestCase):
         new_recipe = Recipe.objects.filter(title='Test')
         self.assertEqual(len(new_recipe), 1)
 
-    def test_can_edit_recipe(self):
+    def test_edit_recipe(self):
         """
-        Testing editing a recipe
+        Test editing a recipe
         """
         self.client.post(f'/edit_recipe/{self.recipe.id}', {
             'title': 'Test',
@@ -103,4 +103,9 @@ class TestViews(TestCase):
         edited_recipe = Recipe.objects.first().description
         self.assertEqual(edited_recipe, "Edited Description")
 
-    
+    def test_add_comment(self):
+        """
+        Testing comments can be added to database
+        """
+        self.client.post(f'/{self.recipe.slug}/', {'body': 'Test comment with fries'})
+        self.assertEqual(Comment.objects.last().body, "Test comment with fries")
