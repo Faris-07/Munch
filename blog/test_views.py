@@ -109,3 +109,15 @@ class TestViews(TestCase):
         """
         self.client.post(f'/{self.recipe.slug}/', {'body': 'Test comment with fries'})
         self.assertEqual(Comment.objects.last().body, "Test comment with fries")
+
+    def test_like_button(self):
+        """
+        Testing like button when recipe is liked
+        """
+        response = self.client.post(f'/like/{self.recipe.slug}')
+        self.assertRedirects(response, f'/{self.recipe.slug}/')
+        is_user_present = self.recipe.likes.filter(id=1).exists()
+        self.assertTrue(is_user_present)
+        response = self.client.post(f'/like/{self.recipe.slug}')
+        is_user_present = self.recipe.likes.filter(id=1).exists()
+        self.assertFalse(is_user_present)
