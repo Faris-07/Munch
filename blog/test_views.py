@@ -89,3 +89,18 @@ class TestViews(TestCase):
         })
         new_recipe = Recipe.objects.filter(title='Test')
         self.assertEqual(len(new_recipe), 1)
+
+    def test_can_edit_recipe(self):
+        """
+        Testing editing a recipe
+        """
+        self.client.post(f'/edit_recipe/{self.recipe.id}', {
+            'title': 'Test',
+            'description': 'Edited Description',
+            'ingredients': 'Test',
+            'method': 'Test'
+        })
+        edited_recipe = Recipe.objects.first().description
+        self.assertEqual(edited_recipe, "Edited Description")
+
+    
