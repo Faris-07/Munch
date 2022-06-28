@@ -56,3 +56,11 @@ class TestViews(TestCase):
         response = self.client.get('/add_recipe/')
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, 'add_recipe.html')
+
+    def test_get_liked_recipes_page(self):
+        """
+        Test to ensure liked recipes page is displayed
+        """
+        response = self.client.get('/liked_recipes/')
+        self.assertEqual(response.status_code, 200)
+        self.assertTemplateUsed(response, 'liked_recipes.html')
