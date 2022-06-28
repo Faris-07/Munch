@@ -2,6 +2,7 @@ from django.test import TestCase
 from django.contrib.auth.models import User
 from .models import Recipe, Comment
 
+
 class TestViews(TestCase):
     """
     Testing for Views
@@ -39,3 +40,12 @@ class TestViews(TestCase):
         response = self.client.get(f'/{self.recipe.slug}/')
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, 'recipe_detail.html')
+
+    def test_get_searched_recipe_page(self):
+        """
+        Test to ensure searched results page is displayed
+        """
+        response = self.client.get('/search_recipe/')
+        self.assertEqual(response.status_code, 200)
+        self.assertTemplateUsed(response, 'search_recipe.html')
+
