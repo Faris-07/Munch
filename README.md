@@ -298,6 +298,9 @@ To deploy the project through Heroku I followed these steps:
 - Remaining Bugs
     - No bugs remaining.
 
+- Performance
+    - There is a slight dip in performance due to the hero image
+
 ## Credits
 - 
 
