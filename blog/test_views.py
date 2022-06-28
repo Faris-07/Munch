@@ -124,7 +124,7 @@ class TestViews(TestCase):
 
     def test_search_bar_returns_searched_word_results(self):
         """
-        Testing the search bar results for the word/recipe searched
+        Testing the search bar results for the word/recipe searched is returned
         """
         searched = 'Test'
         recipes = Recipe.objects.filter(title__icontains=searched)
