@@ -64,3 +64,11 @@ class TestViews(TestCase):
         response = self.client.get('/liked_recipes/')
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, 'liked_recipes.html')
+
+    def test_get_edit_recipe_page(self):
+        """
+        Test to ensure edit recipe page is displayed
+        """
+        response = self.client.get(f'/edit_recipe/{self.recipe.id}')
+        self.assertEqual(response.status_code, 200)
+        self.assertTemplateUsed(response, 'edit_recipe.html')
