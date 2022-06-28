@@ -17,6 +17,8 @@ class TestViews(TestCase):
             )
         self.client.login(username='testuser', password='testpw')
 
+    # Tests to display pages
+
     def test_get_home_page(self):
         """
         Test to ensure home page is displayed
@@ -72,3 +74,18 @@ class TestViews(TestCase):
         response = self.client.get(f'/edit_recipe/{self.recipe.id}')
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, 'edit_recipe.html')
+
+    # Tests for page functionality
+
+    def test_can_add_recipe(self):
+        """
+        Testing recipes can be added to database
+        """
+        self.client.post('/add_recipe/', {
+            'title': 'Test',
+            'description': 'Test',
+            'ingredients': 'Test',
+            'method': 'Test'
+        })
+        new_recipe = Recipe.objects.filter(title='Test')
+        self.assertEqual(len(new_recipe), 1)
