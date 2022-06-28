@@ -31,3 +31,11 @@ class TestViews(TestCase):
         response = self.client.get('/recipes/')
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, 'recipes.html')
+
+    def test_get_recipe_detail_page(self):
+        """
+        Test to ensure recipe details page is displayed
+        """
+        response = self.client.get(f'/{self.recipe.slug}/')
+        self.assertEqual(response.status_code, 200)
+        self.assertTemplateUsed(response, 'recipe_detail.html')
