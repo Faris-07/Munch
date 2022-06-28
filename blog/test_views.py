@@ -121,3 +121,16 @@ class TestViews(TestCase):
         response = self.client.post(f'/like/{self.recipe.slug}')
         is_user_present = self.recipe.likes.filter(id=1).exists()
         self.assertFalse(is_user_present)
+
+    def test_search_bar_returns_searched_word_results(self):
+        """
+        Testing the search bar results for the word/recipe searched
+        """
+        searched = 'Test'
+        recipes = Recipe.objects.filter(title__icontains=searched)
+        response = self.client.post('/search_recipe/', {
+            'searched': searched,
+            'recipes': recipes
+        })
+        self.assertEqual(response.context['searched'], 'Test')
+        self.assertEqual(len(response.context['recipe']), 1)
