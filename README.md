@@ -1,10 +1,12 @@
 # Munch
 
-Munch is a social recipe blog website where users (Munchers) come together to share recipes with other users. As a user you can add, edit, delete, comment and like recipes.
+Munch is a social recipe blog website where users (Munchers) come together to share recipes with other users. 
 
-The live link can be found here - [Munch]()
+As a Muncher you can explore recipes from around the globe, create and share your own recipes, cherish your favourites and be part of a community of foodies.
 
-![responsive]()
+The live link can be found here - [Munch](https://munch-blog.herokuapp.com/)
+
+![responsive](/static/images/responsive-munch.png)
 
 # User Experience (UX)
 
@@ -299,7 +301,7 @@ To deploy the project through Heroku I followed these steps:
     - No bugs remaining.
 
 - Performance
-    - There is a slight dip in performance due to the hero image
+    - There is a slight dip in performance due to the hero image.
 
 ## Credits
 - 
