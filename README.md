@@ -348,7 +348,8 @@ To deploy the project through Heroku I followed these steps:
     -  
 
 - Remaining Bugs
-    - No bugs remaining.
+    - The W3C validators show errors on the add and edit recipe pages. This is because of the installed Summernote library so are unable to be fixed.
+    - A few pylint errors show in the settings.py file but can be ignored as they are due to unrecognised syntax.
 
 ## Credits
 - When researching on how to set navbar items to active in django I came across the tekshinobi website which showed me how to implement dynamic active navbar links. The tekshinobi website can be found [here](https://tekshinobi.com/setting-active-navbar-link-in-django-template/).
