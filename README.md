@@ -265,8 +265,21 @@ The design of the database can be seen below.
 
 # Testing
 
+## Site Testing
+
+
+
 ## Unit Testing
 
+- Views Testing
+    - I unit tested the views.py file by going through the page functionality to make sure that they were correctly displayed.
+    - I also tested the functionality of the main features such as adding a recipe, editing the recipe and liking posts.
+    - All tests passed with 100% success.
+
+- Forms Testing
+    - I unit tested the forms.py file by going through the form functionality to make sure that they were correctly displayed.
+    - I also tested the functionality of the forms in terms of fields required.
+    - All tests passed with 100% success.
 
 ## Validator Testing
 
@@ -283,7 +296,6 @@ The design of the database can be seen below.
     - No errors were found when passing through the [PEP8 Validator tool](http://pep8online.com/).
 
 - **Lighthouse**
-
     - 
 
 ## Deployment
