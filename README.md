@@ -265,6 +265,9 @@ The design of the database can be seen below.
 
 # Testing
 
+## Unit Testing
+
+
 ## Validator Testing
 
 - HTML
@@ -285,13 +288,34 @@ The design of the database can be seen below.
 
 ## Deployment
 
-The site was deployed via Heroku, and the live link can be found here - [Munch]()
+The site was deployed via Heroku, and the live link can be found here - [Munch](https://munch-blog.herokuapp.com/)
+
+### Django and Heroku
+
+- I followed the Code Institute's [Django Blog cheatsheet](https://codeinstitute.s3.amazonaws.com/fst/Django%20Blog%20Cheat%20Sheet%20v1.pdf) to install and setup the django framework.
 
 ### Project Deployment
 
 To deploy the project through Heroku I followed these steps:
 - Sign up / Log in to [Heroku](https://www.heroku.com/)
 - From the main Heroku Dashboard page select 'New' and then 'Create New App'
+- Give the project a name - I entered Munch-blog and select a suitable region, then select create app. The name for the app must be unique.
+- This will create the app within Heroku and bring you to the deploy tab. From the submenu at the top, navigate to the settings tab.
+- This next step is required for creating the app when using the CI Python Deployment Template. If you created your own program without using the CI Template, you might not need to add a config var.
+- In the config vars section select the reveal config vars button. This will display the current config vars for the app, there should be nothing already there.
+- In the KEY input field input PORT all in capitals, then in the VALUE field input 8000 and select the Add button to the right.
+- Next add Heroku Postgres to the app by searching Heroku Postgres and selecting the hobby version. This is the database used by the application.
+- In the KEY input field input DATABASE_URL all in capitals, then in the VALUE field input the Postgres link from the settings.py file of your project and select the Add button to the right.
+- In the KEY input field input CLOUDINARY_URL all in capitals, then in the VALUE field input the Cloudinary link from the settings.py file of your project and select the Add button to the right.
+- In the KEY input field input SECRET_KEY in capitals, then in the VALUE field input your projects secret key from the settings.py file of your project and select the Add button to the right. 
+- Next navigate back to the deploy tab using the submenu at the top of the page.
+- In the deployment method section select the GitHub - Connect to GitHub button and follow the steps prompted if any to connect your GitHub account
+- In the Connect to GitHub section that appears, select the correct account, and enter the name of the repository and select search.
+- Once Heroku has located the repo select connect.
+- This will connect the repo to the app within Heroku. Below the Apps Connected to Heroku section will be the Automatic Deploys section.
+- In this section, confirm the correct branch of the repo is selected in the drop-down box, and then click the Enable Automatic Deploys button
+- This will ensure whenever you change something in the repo and push the changes to GitHub, Heroku will rebuild the app. If you prefer to do this manually you can utilise the manual deployment options further down. For this project I utilised the Automatic Deployment to enable me to check changes I made to the app as I developed it.
+- Heroku will now build the app for you. Once it has completed the build process you will see a 'Your App Was Successfully Deployed' message and a link to the app to visit the live site.
 
 ## Bugs
 - Solved Bugs
@@ -300,12 +324,12 @@ To deploy the project through Heroku I followed these steps:
 - Remaining Bugs
     - No bugs remaining.
 
-- Performance
-    - There is a slight dip in performance due to the hero image.
-
 ## Credits
-- 
+- When researching on how to set navbar items to active in django I came across the tekshinobi website which showed me how to implement dynamic active navbar links. The tekshinobi website can be found [here](https://tekshinobi.com/setting-active-navbar-link-in-django-template/).
+- When researching on how to implement the search function I came across this [stack overflow](https://stackoverflow.com/questions/38006125/how-to-implement-search-function-in-django) post which helped me conceptualize how the seach functionality would work.
+- [The code insitutes](https://codeinstitute.net/) 'I think therefore I blog' project which inspired the overall feel of the recipe and recipe detail pages.
 
 ### Media
-- 
+- The hero image was taken from [Unsplash](https://unsplash.com/photos/1LPsUqjb_Jg)
+- The recipes and recipe images were taken from [iamafoodblog](https://iamafoodblog.com/)
  

@@ -1,6 +1,9 @@
 from django.test import TestCase
 from django.contrib.auth.models import User
 from .models import Recipe, Comment
+"""
+Importing TestCase for unit testing and Recipe and Comment models from blog.models
+"""
 
 
 class TestViews(TestCase):
