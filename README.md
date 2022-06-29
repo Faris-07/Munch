@@ -267,7 +267,21 @@ The design of the database can be seen below.
 
 ## Site Testing
 
-
+- I checked that the user can easily navigate through the website pages.
+- I tested if the user could register for an account.
+- I tested if a registered user can log in.
+- I tested if the user can view the recipes page.
+- I checked if the recipes page would paginate after 6 recipes where published.
+- I tested if the user can click into a recipe.
+- I tested if the user can view the recipe detail.
+- I tested if the user can add a recipe.
+- I tested if the user can edit their recipe.
+- I tested if the user can delete their recipe.
+- I tested if the user can comment on a recipe.
+- I tested if the user can like a recipe.
+- I tested if the user's liked recipe displayed in the users liked recipes page.
+- I tested if the footer links link to their specified icon and open in a new tab.
+- All tests passed with 100% success. 
 
 ## Unit Testing
 
@@ -295,7 +309,7 @@ The design of the database can be seen below.
 - Python
     - No errors were found when passing through the [PEP8 Validator tool](http://pep8online.com/).
 
-- **Lighthouse**
+- Lighthouse
     - 
 
 ## Deployment
