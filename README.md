@@ -310,7 +310,8 @@ The design of the database can be seen below.
     - No errors were found when passing through the [PEP8 Validator tool](http://pep8online.com/).
 
 - Lighthouse
-    - 
+
+    ![lighthouse performance](static/images/lighthouse-munch.png)
 
 ## Deployment
 
